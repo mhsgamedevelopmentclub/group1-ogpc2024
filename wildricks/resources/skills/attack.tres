@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://cgi3gvsbnu3tx"]
+
+[ext_resource type="Script" path="res://scripts/custom_resources/skill_res.gd" id="1_05nqo"]
+
+[resource]
+script = ExtResource("1_05nqo")
+name = "Attack"
+description = "Basic attack that deals a light amount of damage."
+color = Color(1, 0, 0, 1)
+skill_cost = 1
+damage = 7
+shield = 0
+heal = 0

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=2 format=3 uid="uid://cbt0j8qfp0anf"]
+
+[ext_resource type="Script" path="res://scripts/custom_resources/skill_res.gd" id="1_lpm87"]
+
+[resource]
+script = ExtResource("1_lpm87")
+name = "Heal"
+description = "Basic native ritual that restores a very light amount of hp to the actor"
+color = Color(0, 1, 0, 1)
+skill_cost = 1
+damage = 0
+shield = 0
+heal = 2

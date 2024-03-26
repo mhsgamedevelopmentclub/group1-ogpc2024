@@ -16,10 +16,5 @@ script = ExtResource("1_l861i")
 [node name="PlayerActor" parent="TurnQueue" instance=ExtResource("1_rmw7m")]
 
 [node name="EnemyActor" parent="TurnQueue" instance=ExtResource("2_j0rps")]
-def_strength = 3
-heal_strength = 1
 
 [node name="HUD" parent="." instance=ExtResource("1_x3gjc")]
-
-[connection signal="do_damage" from="TurnQueue/PlayerActor" to="TurnQueue/EnemyActor" method="_on_player_actor_do_damage"]
-[connection signal="do_damage" from="TurnQueue/EnemyActor" to="TurnQueue/PlayerActor" method="_on_enemy_actor_do_damage"]
