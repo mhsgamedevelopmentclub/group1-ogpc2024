@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://crks0u1dcickr"]
 
 [ext_resource type="PackedScene" uid="uid://bydfq2apgvxox" path="res://scenes/inventory.tscn" id="1_4bbh3"]
-[ext_resource type="Script" path="res://scripts/hud.gd" id="1_7oh48"]
+[ext_resource type="Script" path="res://scripts/battle_hud.gd" id="1_7oh48"]
 [ext_resource type="PackedScene" uid="uid://cm2ixvpaqxaiq" path="res://scenes/turn_wheel.tscn" id="2_32e87"]
 [ext_resource type="PackedScene" uid="uid://dgkvlie7gu3cx" path="res://scenes/atb_container.tscn" id="3_267x7"]
 [ext_resource type="PackedScene" uid="uid://bmrtuohicjoho" path="res://scenes/battle_background.tscn" id="4_m153h"]

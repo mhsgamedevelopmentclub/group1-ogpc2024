@@ -13,17 +13,18 @@ extends Node2D
 signal do_damage(damage: int)
 signal update_health_ui(value: int)
 signal update_atb_timer_ui(value: int)
-signal open_change_turn
+signal start_change_turn
+signal finish_change_turn
 signal death
 
 @onready var sprite: CompressedTexture2D = preload('res://assets/OGPC MC Front Facing Pixel.png')
 
 @export var max_health: int = 100
-@export var turn_cycle: Array[Skill]
+@export var inventory: Array[Skill]
 
+var turn_cycle: Array[Skill]
 var cur_health: int = max_health
 var cur_idx: int = 0
-
 var barrier: int = 0
 var changing_time: bool = false
 
@@ -33,12 +34,9 @@ func play_turn() -> void:
 	'''
 	if changing_time or turn_cycle.size() == 0:
 		print("shuffling...")
-		emit_signal('toggle_timers')
 		# TODO: make code better so we don't need this
 		@warning_ignore("redundant_await")
 		await _change_moves()
-		emit_signal('toggle_timers')
-		emit_signal('start_new_cycle')
 		changing_time = false
 		cur_idx = 0
 	print("current health: ", cur_health)
@@ -101,5 +99,30 @@ func _heal(health: int) -> void:
 	emit_signal('update_health_ui', cur_health)
 	print('healed '+str(health)+' damage')
 
+func _on_damage_recived(damage: int) -> void:
+	'''
+	Subtracts damage recieved from an opposing actor
+	from the actor's current health
+	
+	:param damage: damage to deplete from health
+	:type damage: int
+	'''
+	if barrier > 0:
+		damage -= barrier
+	if damage > 0:
+		cur_health -= damage
+	if cur_health <= 0:
+		emit_signal('death')
+	emit_signal('update_health_ui', cur_health)
+
+func _on_atb_timer_timeout() -> void:
+	'''
+	Sets changing_time to true when signal is recieved
+	'''
+	changing_time = true
+
 func _change_moves() -> void:
+	'''
+	Implemented solely by child classes
+	'''
 	pass

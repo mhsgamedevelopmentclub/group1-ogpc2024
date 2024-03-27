@@ -1,3 +1,4 @@
+class_name HealthBar
 extends Node2D
 
 @onready var bar_red := load('res://assets/barHorizontal_red.png')

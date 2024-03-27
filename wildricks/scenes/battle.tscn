@@ -10,11 +10,15 @@
 editor_description = "Main scene for battle system test"
 script = ExtResource("1_ammos")
 
+[node name="HUD" parent="." instance=ExtResource("1_x3gjc")]
+
 [node name="TurnQueue" type="Node" parent="."]
 script = ExtResource("1_l861i")
 
-[node name="PlayerActor" parent="TurnQueue" instance=ExtResource("1_rmw7m")]
+[node name="Heros" type="Node" parent="TurnQueue"]
 
-[node name="EnemyActor" parent="TurnQueue" instance=ExtResource("2_j0rps")]
+[node name="PlayerActor" parent="TurnQueue/Heros" instance=ExtResource("1_rmw7m")]
 
-[node name="HUD" parent="." instance=ExtResource("1_x3gjc")]
+[node name="Enemies" type="Node" parent="TurnQueue"]
+
+[node name="EnemyActor" parent="TurnQueue/Enemies" instance=ExtResource("2_j0rps")]
