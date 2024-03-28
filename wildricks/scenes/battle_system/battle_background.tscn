@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmrtuohicjoho"]
 
-[ext_resource type="Script" path="res://scripts/battle_background.gd" id="1_aglci"]
+[ext_resource type="Script" path="res://scripts/battle_system/battle_background.gd" id="1_aglci"]
 
 [node name="Battle Background" type="ColorRect"]
 anchors_preset = 15

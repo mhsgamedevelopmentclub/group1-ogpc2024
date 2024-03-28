@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dy8refbhl55a1"]
 
-[ext_resource type="Script" path="res://scripts/skill_slot_container.gd" id="1_kynna"]
+[ext_resource type="Script" path="res://scripts/battle_system/skill_slot_container.gd" id="1_kynna"]
 
 [node name="Skill Slot Container" type="VBoxContainer" groups=["drag_container"]]
 anchors_preset = 15

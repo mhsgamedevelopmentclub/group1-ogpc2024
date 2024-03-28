@@ -9,7 +9,7 @@ extends Actor
 
 var turn_ord_updater: Signal
 
-func change_moves() -> void:
+func _change_moves() -> void:
 	'''
 	Send's signal to turn queue to update the actor's
 	turn cycle

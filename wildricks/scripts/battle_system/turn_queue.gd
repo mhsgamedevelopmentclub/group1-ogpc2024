@@ -9,9 +9,11 @@ var turn_count: int = 0
 
 func init() -> void:
 	# TODO: initialize actors
-	# TODO: connect actor signals to each other
+	for hero in (heros.get_children() as Array[PlayerActor]):
+		for enemy in (enemies.get_children() as Array[EnemyActor]):
+			_interconnect(hero, enemy)
 	while true:
-		play_round()
+		await play_round()
 
 func play_round() -> void:
 	round_count += 1
@@ -27,3 +29,7 @@ func play_round() -> void:
 		print('Turn '+str(turn_count)+':')
 		print('current actor: '+actor.name)
 		await actor.play_turn()
+
+func _interconnect(player: PlayerActor, enemy: EnemyActor) -> void:
+	player.connect('do_damage', enemy._on_damage_recived)
+	enemy.connect('do_damage', player._on_damage_recived)

@@ -6,7 +6,7 @@ extends class:`Actor`
 class_name EnemyActor
 extends Actor
 
-func change_moves() -> void:
+func _change_moves() -> void:
 	'''
 	Update's the actor's turn cycle by randomly 
 	shuffling it
@@ -18,7 +18,7 @@ func change_moves() -> void:
 	await get_tree().create_timer(1).timeout
 	emit_signal('finish_change_turn')
 
-func _init() -> void:
+func _ready() -> void:
 	'''
 	Sets up the actor's initial turn cycle
 	'''

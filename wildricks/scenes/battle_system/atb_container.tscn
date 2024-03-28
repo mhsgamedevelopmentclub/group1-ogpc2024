@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dgkvlie7gu3cx"]
 
-[ext_resource type="Script" path="res://scripts/atb_container.gd" id="1_0oqqf"]
+[ext_resource type="Script" path="res://scripts/battle_system/atb_container.gd" id="1_0oqqf"]
 
 [node name="ATB Container" type="Control"]
 layout_mode = 3

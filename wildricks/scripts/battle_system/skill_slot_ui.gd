@@ -1,9 +1,13 @@
-extends ColorRect
 class_name SkillSlot
+extends ColorRect
 
-func init(label: String) -> void:
-	name = label
-	$Label.text = label
+var skill_ref: Skill
+
+func init(skill: Skill) -> void:
+	skill_ref = skill
+	color = skill.color
+	name = skill.name
+	($Label as Label).text = skill.name
 
 func _get_drag_data(_at_position: Vector2) -> SkillSlot:
 	set_drag_preview(make_preview())

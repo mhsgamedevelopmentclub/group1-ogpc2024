@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm2ixvpaqxaiq"]
 
-[ext_resource type="Script" path="res://scripts/turn_wheel.gd" id="1_0vpr8"]
-[ext_resource type="PackedScene" uid="uid://dy8refbhl55a1" path="res://scenes/skill_slot_container.tscn" id="1_d8ap7"]
+[ext_resource type="Script" path="res://scripts/battle_system/turn_wheel.gd" id="1_0vpr8"]
+[ext_resource type="PackedScene" uid="uid://dy8refbhl55a1" path="res://scenes/battle_system/skill_slot_container.tscn" id="1_d8ap7"]
 
 [node name="Turn Wheel" type="Control"]
 layout_mode = 3

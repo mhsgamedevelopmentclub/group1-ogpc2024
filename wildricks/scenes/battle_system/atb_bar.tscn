@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cbng03ofnhoxw"]
 
-[ext_resource type="Script" path="res://scripts/atb_bar.gd" id="1_usbw7"]
+[ext_resource type="Script" path="res://scripts/battle_system/atb_bar.gd" id="1_usbw7"]
 
 [node name="ATB Bar" type="HBoxContainer"]
 anchors_preset = 15

@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://lqcy5abshwi"]
+
+[ext_resource type="Script" path="res://scripts/battle_system/battle.gd" id="1_klyhq"]
+[ext_resource type="Script" path="res://scripts/battle_system/turn_queue.gd" id="3_j1rtg"]
+[ext_resource type="PackedScene" uid="uid://bjsu0h8ob28x" path="res://scenes/battle_system/player_actor.tscn" id="4_7smx6"]
+[ext_resource type="PackedScene" uid="uid://c2wfy5me6dyxi" path="res://scenes/battle_system/enemy_actor.tscn" id="5_ntudp"]
+[ext_resource type="PackedScene" uid="uid://crks0u1dcickr" path="res://scenes/battle_system/hud.tscn" id="2_bey47"]
+
+[node name="Battle" type="Node"]
+script = ExtResource("1_klyhq")
+
+[node name="HUD" parent="." instance=ExtResource("2_bey47")]
+
+[node name="Turn Queue" type="Node" parent="."]
+script = ExtResource("3_j1rtg")
+
+[node name="Heros" type="Node" parent="Turn Queue"]
+
+[node name="PlayerActor" parent="Turn Queue/Heros" instance=ExtResource("4_7smx6")]
+
+[node name="Enemies" type="Node" parent="Turn Queue"]
+
+[node name="EnemyActor" parent="Turn Queue/Enemies" instance=ExtResource("5_ntudp")]

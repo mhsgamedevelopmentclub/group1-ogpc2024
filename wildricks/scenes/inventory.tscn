@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bydfq2apgvxox"]
 
-[ext_resource type="Script" path="res://scripts/inventory.gd" id="1_g750g"]
-[ext_resource type="PackedScene" uid="uid://dy8refbhl55a1" path="res://scenes/skill_slot_container.tscn" id="1_rc6hc"]
+[ext_resource type="Script" path="res://scripts/battle_system/inventory.gd" id="1_g750g"]
+[ext_resource type="PackedScene" uid="uid://dy8refbhl55a1" path="res://scenes/battle_system/skill_slot_container.tscn" id="1_rc6hc"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3

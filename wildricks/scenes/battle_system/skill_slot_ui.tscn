@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3lreodvcwows"]
 
-[ext_resource type="Script" path="res://scripts/skill_slot_ui.gd" id="1_0bunm"]
+[ext_resource type="Script" path="res://scripts/battle_system/skill_slot_ui.gd" id="1_0bunm"]
 
 [node name="Skill Slot UI" type="ColorRect" groups=["draggable"]]
 custom_minimum_size = Vector2(140, 40)
